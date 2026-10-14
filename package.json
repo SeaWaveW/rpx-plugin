@@ -1,0 +1,45 @@
+{
+	"name": "@saco/rpx-plugin",
+	"version": "1.0.0",
+	"description": "把样式里的 px 换成 rpx，给 uni-app x 的 PostCSS 和模板 style 用",
+	"author": "seawavew",
+	"license": "MIT",
+	"type": "commonjs",
+	"homepage": "https://github.com/SeaWaveW/rpx-plugin#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SeaWaveW/rpx-plugin.git"
+	},
+	"bugs": {
+		"url": "https://github.com/SeaWaveW/rpx-plugin/issues"
+	},
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org/"
+	},
+	"keywords": ["saco", "rpx", "postcss", "uni-app", "px"],
+	"engines": {
+		"node": ">=20"
+	},
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"require": "./dist/index.js",
+			"default": "./dist/index.js"
+		},
+		"./package.json": "./package.json"
+	},
+	"files": ["dist"],
+	"sideEffects": false,
+	"scripts": {
+		"build": "tsc -p tsconfig.json",
+		"prepare": "tsc -p tsconfig.json",
+		"prepublishOnly": "pnpm build"
+	},
+	"devDependencies": {
+		"@types/node": "^24.13.3",
+		"typescript": "~5.9.3"
+	}
+}
